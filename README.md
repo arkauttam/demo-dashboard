@@ -1,5 +1,8 @@
-# Sneat Dashboard — Project Report
+# 🚀 Sneat Dashboard
 
+
+
+---
 
 ## 🛠 Technology Stack
 
@@ -8,53 +11,158 @@
 | React 18 | UI component library |
 | Vite 5 | Build tool & dev server |
 | TypeScript | Type-safe development |
-| Tailwind CSS | Utility-first styling (Sneat theme) |
-| Recharts | Data visualization (charts & graphs) |
-| React Router v6 | Client-side routing |
-| Lucide React | Icon system |
-| Radix UI | Accessible UI primitives |
+| Tailwind CSS | Utility-first styling |
+| Recharts | Charts & data visualization |
+| React Router v6 | Routing |
+| Lucide React | Icons |
+| Radix UI | Accessible primitives |
+| ShadCN UI | UI components |
+| React Hook Form | Form handling |
+| Zod | Validation |
+
+---
 
 ## 🎨 Design System
 
-- **Theme**: Light mode only, Sneat UI–inspired
-- **Primary Color**: Indigo / Purple (`#7C3AED`)
-- **Font**: Public Sans (Google Fonts)
-- **Shadows**: Sneat-style soft card shadows
-- **Border Radius**: Rounded corners throughout
+- Theme: Light (Sneat UI inspired)
+- Primary Color: `#7C3AED`
+- Font: Public Sans
+- Rounded UI & soft shadows
+- Clean enterprise dashboard layout
+
+---
 
 ## 📄 Pages
 
-### 1. Login Page (`/login`)
-- Email & password form with validation
+### 🔐 Login / Signup (`/login`)
+- Login + Signup toggle
+- Zod validation
 - Password visibility toggle
-- "Remember Me" checkbox
-- Social login buttons (Google, GitHub)
-- Redirect to dashboard on submit
+- Remember me
+- Fake authentication (localStorage)
 
-### 2. Dashboard (`/dashboard`)
-- **Stat Cards**: Total Revenue, Active Users, New Orders, Growth Rate
-- **Revenue Overview**: Area chart showing monthly revenue trends
-- **Weekly Sales**: Bar chart with weekly sales breakdown
-- **Category Distribution**: Pie chart for product categories
-- **Recent Transactions**: Table with status badges and amounts
+---
+
+### 📊 Dashboard (`/dashboard`)
+- Stat cards (Revenue, Users, Orders)
+- Area, Bar & Pie charts
+- Transactions table
+
+---
+
+### 📈 Analytics (`/dashboard/analytics`)
+- Data insights with charts
+- Clean analytics layout
+
+---
+
+### 👥 Users (`/dashboard/users`)
+- User table with search & filter
+- Status & role badges
+- Avatar generation
+
+#### ➕ Add User
+- Modal form (ShadCN Dialog)
+- Zod validation
+- Dynamic table update
+
+---
+
+### ❌ Not Found
+- Fallback route for invalid pages
+
+---
 
 ## 🧩 Key Components
 
-| Component | Description |
-|---|---|
-| `DashboardLayout` | Main layout wrapper with sidebar + topbar |
-| `DashboardSidebar` | Collapsible navigation sidebar with menu badges |
-| `DashboardTopbar` | Sticky top bar with search, notifications, profile |
-| `Login` | Authentication page with form & social logins |
-| `Dashboard` | Main dashboard with charts, stats & transactions |
+- `DashboardLayout` → Layout wrapper
+- `DashboardSidebar` → Navigation
+- `DashboardTopbar` → Header
+- `Login` → Auth page
+- `UsersPage` → User management
+- `Analytics` → Analytics page
 
-## 📱 Responsive Breakpoints
+---
 
-| Breakpoint | Behavior |
-|---|---|
-| Desktop (≥1024px) | Full sidebar visible, multi-column grid |
-| Tablet (768–1023px) | Collapsible sidebar, adjusted grid |
-| Mobile (<768px) | Hidden sidebar with hamburger menu, single column |
+## 🔐 Authentication
+
+- Fake auth using `localStorage`
+- Any email/password works
+- Redirects to dashboard after login
+
+---
+
+## 🧾 Forms & Validation
+
+- React Hook Form + Zod
+- Real-time validation
+- Clean error messages
+
+---
+
+## 📊 Charts
+
+Built using Recharts:
+
+- Area Chart (Revenue)
+- Bar Chart (Sales)
+- Line Chart (Users)
+- Pie Chart (Categories)
+
+---
+
+## 📱 Responsive Design
+
+| Device | Behavior |
+|------|--------|
+| Desktop | Full sidebar |
+| Tablet | Collapsible sidebar |
+| Mobile | Drawer sidebar |
+
+---
+
+## 📂 Project Structure
+src/
+├── components/
+│ ├── DashboardLayout.tsx
+│ ├── DashboardSidebar.tsx
+│ ├── DashboardTopbar.tsx
+│ └── ui/
+├── pages/
+│ ├── Login.tsx
+│ ├── Dashboard.tsx
+│ ├── Analytics.tsx
+│ ├── Users.tsx
+│ └── NotFound.tsx
+├── App.tsx
+├── main.tsx
+└── index.css
+
+
+---
+
+## 🚀 Routes
+/login
+/dashboard
+/dashboard/analytics
+/dashboard/users
+
+
+
+---
+
+## ⚡ Features
+
+- Sneat UI Design
+- Fully Responsive
+- Sidebar Navigation (Active State Fixed)
+- Login + Signup (Zod)
+- Fake Authentication
+- Dashboard with Charts
+- User Management
+- Add User Modal
+
+---
 
 ## 🚀 Getting Started
 
@@ -62,42 +170,11 @@
 # Install dependencies
 npm install
 
-# Start development server
+# Start dev server
 npm run dev
 
-# Build for production
+# Build project
 npm run build
 
-# Preview production build
+# Preview build
 npm run preview
-```
-
-## 📂 Project Structure
-
-```
-src/
-├── components/
-│   ├── DashboardLayout.tsx
-│   ├── DashboardSidebar.tsx
-│   ├── DashboardTopbar.tsx
-│   └── ui/              # Reusable UI primitives
-├── pages/
-│   ├── Login.tsx
-│   ├── Dashboard.tsx
-│   └── NotFound.tsx
-├── hooks/
-├── lib/
-├── App.tsx
-├── main.tsx
-└── index.css
-```
-
-## 📊 Charts & Visualizations
-
-All charts are built with **Recharts** and include:
-- Smooth gradient area charts
-- Rounded bar charts
-- Interactive pie charts with custom tooltips
-- Responsive containers that adapt to screen size
-
-

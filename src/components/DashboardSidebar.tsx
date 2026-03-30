@@ -76,11 +76,7 @@ const DashboardSidebar = ({ collapsed, mobileOpen, onToggleMobile }: SidebarProp
 
         {/* Nav */}
         <nav className="flex-1 overflow-y-auto py-4 px-3">
-          {!collapsed && (
-            <p className="text-[11px] font-semibold uppercase text-muted-foreground tracking-wider px-3 mb-3">
-              Main
-            </p>
-          )}
+         
 
           <ul className="space-y-1">
             {menuItems.map((item) => {

@@ -77,9 +77,7 @@ export default function ECommerce() {
           <h1 className="text-2xl font-bold text-foreground">eCommerce</h1>
           <p className="text-sm text-muted-foreground mt-1">Manage your store, products, and orders.</p>
         </div>
-        <button className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">
-          <Package size={16} /> Add Product
-        </button>
+        
       </div>
 
       {/* Stats */}
