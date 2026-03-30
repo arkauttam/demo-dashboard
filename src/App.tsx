@@ -14,6 +14,7 @@ import ECommerce from "./pages/Ecommerce";
 
 const queryClient = new QueryClient();
 
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
